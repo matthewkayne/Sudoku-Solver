@@ -1,5 +1,3 @@
-import numpy as np
-
 # Define Sudoku board
 board = [[6,4,0,0,0,0,0,0,2],
          [9,0,0,0,5,0,7,0,0],
@@ -42,5 +40,6 @@ def solve():
                         # Backtracking
                         board[y][x] = 0
                 return None
-    print(np.matrix(board))           
+    for i in range(9):
+        print(board[i])         
 solve()    
