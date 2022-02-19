@@ -11,7 +11,6 @@ board = [[6,4,0,0,0,0,0,0,2],
 
 # Checks if a number fits the constraints
 def possible(y,x,n):
-    global board
     for i in range(9):
         if board[y][i] == n:
             return False
@@ -28,7 +27,6 @@ def possible(y,x,n):
 
 # Solves the board
 def solve():
-    global board
     for y in range(9):
         for x in range(9):
             if board[y][x] == 0:
