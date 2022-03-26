@@ -10,8 +10,6 @@ board = [[6, 4, 0, 0, 0, 0, 0, 0, 2],
          [0, 0, 7, 0, 2, 0, 0, 0, 9],
          [5, 0, 0, 0, 0, 0, 0, 6, 4]]
 
-# Checks if a number fits the constraints
-
 
 def possible(y, x, n):
     """Possible"""
@@ -21,11 +19,11 @@ def possible(y, x, n):
     for j in range(9):
         if board[j][x] == n:
             return False
-    xbox = (x//3)*3
-    ybox = (y//3)*3
+    x_box = (x//3)*3
+    y_box = (y//3)*3
     for i in range(3):
         for j in range(3):
-            if board[ybox+i][xbox+j] == n:
+            if board[y_box+i][x_box+j] == n:
                 return False
     return True
 
